@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_start/components/Storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:dio/dio.dart';
 
@@ -89,7 +90,13 @@ class _HttpPageState extends State<HttpPage> {
                             title: Text(item['name']),
                           );
                         }).toList()
-                      : <Widget>[ Text('加载中')] // 注意要加 <Widget>[...]
+                      : <Widget>[ Text('加载中'),
+                    RaisedButton(onPressed: () async{
+                      String username = await Storage.getString('username');
+                      print(username);
+                    },
+                        child: Text('读取本地数据')),] // 注意要加 <Widget>[...]
+
               ))
         ])));
   }

@@ -98,6 +98,11 @@ class _HomePageState extends State<HomePage> {
               onPressed: (){
                 Navigator.pushNamed(context, '/device');
               }),
+          RaisedButton(
+              child: Text('本地存储'),
+              onPressed: (){
+                Navigator.pushNamed(context, '/sharedPreferences');
+              }),
         ],
       )
     );

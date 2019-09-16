@@ -21,6 +21,7 @@ import 'package:flutter_start/pages/Http.dart';
 import 'package:flutter_start/pages/Scroll.dart';
 import 'package:flutter_start/pages/NewsDetail.dart';
 import 'package:flutter_start/pages/Device.dart';
+import 'package:flutter_start/pages/SharedPreferences.dart';
 
 final routes = {
   '/': (content) => Tabs(),
@@ -46,6 +47,7 @@ final routes = {
   '/scroll': (content) => ScrollPage(),
   '/newsDetail': (content, {arguments}) => NewsDetail(arguments: arguments),
   '/device': (content) => DevicePage(),
+  '/sharedPreferences': (content) => SharedPreferencesPage(), // url_launcher 打开外部浏览器，打电话，发短信，外部应用
 };
 
 // ignore: strong_mode_top_level_function_literal_block
